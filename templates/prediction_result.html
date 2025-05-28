@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">Prediction Result</h1>
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Recommended Crop: <span class="text-success">{{ prediction }}</span></h3>
+        
+        <div class="mt-4">
+            <h5>Input Parameters:</h5>
+            <ul>
+                <li>Nitrogen (N): {{ N }}</li>
+                <li>Phosphorous (P): {{ P }}</li>
+                <li>Potassium (K): {{ K }}</li>
+                <li>Temperature: {{ temperature }} °C</li>
+                <li>Humidity: {{ humidity }}%</li>
+                <li>Soil pH: {{ ph }}</li>
+                <li>Rainfall: {{ rainfall }} mm</li>
+            </ul>
+        </div>
+        
+        <a href="/predict" class="btn btn-success mt-3">Make Another Prediction</a>
+    </div>
+</div>
+{% endblock %}

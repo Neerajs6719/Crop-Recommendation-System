@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="mb-4">About This Project</h1>
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">Crop Recommendation System</h5>
+        <p class="card-text">
+            This system uses machine learning to recommend the best crop based on:
+            <ul>
+                <li>Nitrogen (N) content in soil</li>
+                <li>Phosphorous (P) content in soil</li>
+                <li>Potassium (K) content in soil</li>
+                <li>Temperature</li>
+                <li>Humidity</li>
+                <li>Soil pH</li>
+                <li>Rainfall</li>
+            </ul>
+            The model was trained using Random Forest algorithm on a comprehensive dataset.
+        </p>
+    </div>
+</div>
+{% endblock %}
